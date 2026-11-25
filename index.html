@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ahmad Muslim’s portfolio of cybersecurity work, network operations and software projects in Kuala Lumpur.">
+  <title>Ahmad Muslim — Portfolio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #faf9f5;
+      --ink: #232925;
+      --secondary: #505b54;
+      --green: #285645;
+      --line: #cbd0c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font: 1rem/1.58 "Helvetica Neue", system-ui, sans-serif;
+    }
+    main, footer { width: min(52rem, calc(100% - 3rem)); margin-inline: auto; }
+    header { padding: clamp(3rem, 9vw, 6rem) 0 2.8rem; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-weight: 400; }
+    h1 { font-size: clamp(3.1rem, 9vw, 5.7rem); letter-spacing: -.055em; line-height: 1.06; }
+    header .role { margin: .7rem 0 1.5rem; color: var(--green); }
+    header .intro { max-width: 52ch; font-size: 1.12rem; }
+    section { border-top: 1px solid var(--line); display: grid; grid-template-columns: 10rem 1fr; gap: 1.5rem; padding: 2rem 0; }
+    h2 { font-size: 1.55rem; line-height: 1.25; letter-spacing: -.03em; }
+    h3 { font-size: 1.06rem; font-weight: 620; line-height: 1.4; }
+    article + article { margin-top: 1.55rem; }
+    article p { margin-top: .38rem; color: var(--secondary); }
+    a { color: var(--green); text-underline-offset: .23em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+    footer { border-top: 1px solid var(--line); padding: 1.1rem 0 2rem; font-size: .92rem; }
+    @media (max-width: 600px) {
+      section { grid-template-columns: 1fr; gap: 1.1rem; }
+      main, footer { width: calc(100% - 2.5rem); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Ahmad Muslim</h1>
+      <p class="role">Technical Support Engineer · Kuala Lumpur, Malaysia</p>
+      <p class="intro">I work on vulnerability assessments, firewalls and site-to-site VPNs at AXO Technologies. Part of my job is explaining what I found and helping clients decide what to fix first.</p>
+    </header>
+    <section aria-labelledby="work">
+      <h2 id="work">Selected work</h2>
+      <div>
+        <article>
+          <h3>Vulnerability assessments</h3>
+          <p>I planned testing windows for more than 20 web applications, checked scanner findings against the client’s environment and presented the results. In a separate Microsoft Entra assessment, most findings involved gaps in multifactor authentication.</p>
+        </article>
+        <article>
+          <h3>Firewalls and VPNs</h3>
+          <p>I configured Sophos web application firewall rules and investigated IPsec outages. In one case, the remote gateway responded to ping while the tunnel stayed down. That distinction helped narrow the investigation to the VPN configuration.</p>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
+      <div>
+        <article>
+          <h3>HazeNow</h3>
+          <p>For my final-year project, I built a Malaysian air-quality dashboard that brings readings from more than 70 stations together with Malay and English news reports. I used React, Flask and Azure Cosmos DB.</p>
+        </article>
+        <article>
+          <h3>Terraform security checks</h3>
+          <p>I set up a GitHub Actions workflow that runs Checkov on Terraform code, so I can review infrastructure configuration issues alongside the changes that introduced them.</p>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="background">
+      <h2 id="background">Background</h2>
+      <div>
+        <p>BSc in Computer Science (Computer System &amp; Network), University of Malaya. Before joining AXO, I worked on network incidents as a NOC intern at Nevigate Global Network.</p>
+        <p style="margin-top:.65rem">CompTIA Security+ certified.</p>
+      </div>
+    </section>
+  </main>
+  <footer><a href="https://github.com/ahmad-muslim">GitHub · @ahmad-muslim</a></footer>
+</body>
+</html>
