@@ -31,6 +31,12 @@
     h3 { font-size: 1.06rem; font-weight: 620; line-height: 1.4; }
     article + article { margin-top: 1.55rem; }
     article p { margin-top: .38rem; color: var(--secondary); }
+    dl { margin: 0; }
+    dt { font-weight: 620; }
+    dd { margin: .2rem 0 1rem; color: var(--secondary); }
+    dd:last-child { margin-bottom: 0; }
+    .dates { font-size: .92rem; }
+    footer { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; overflow-wrap: anywhere; }
     a { color: var(--green); text-underline-offset: .23em; }
     a:hover { text-decoration-thickness: 2px; }
     a:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
@@ -46,42 +52,69 @@
     <header>
       <h1>Ahmad Muslim</h1>
       <p class="role">Technical Support Engineer · Kuala Lumpur, Malaysia</p>
-      <p class="intro">I work on vulnerability assessments, firewalls and site-to-site VPNs at AXO Technologies. Part of my job is explaining what I found and helping clients decide what to fix first.</p>
+      <p class="intro">My background is in networking, and cybersecurity is where I want to specialize. At AXO, I’ve assessed web applications, reviewed cloud permissions, and investigated suspicious VPN logins. I especially enjoy figuring out which findings matter and helping clients decide what to fix first.</p>
     </header>
     <section aria-labelledby="work">
-      <h2 id="work">Selected work</h2>
+      <h2 id="work">Experience</h2>
       <div>
         <article>
-          <h3>Vulnerability assessments</h3>
-          <p>I planned testing windows for more than 20 web applications, checked scanner findings against the client’s environment and presented the results. In a separate Microsoft Entra assessment, most findings involved gaps in multifactor authentication.</p>
+          <h3>Technical Support Engineer · AXO Technologies</h3>
+          <p class="dates">March 2026 – present</p>
+          <p><strong>Vulnerability assessments</strong> — Assessed 20+ web applications, scheduled scans around client maintenance windows, and validated findings against each client’s environment. Presented remediation priorities and tracked outstanding fixes with the responsible teams.</p>
+          <p><strong>Cloud Security</strong> — Configured Azure network security group (NSG) rules to control traffic and assigned Azure roles using role-based access control (RBAC) to manage access to cloud resources.</p>
+		  <p><strong>Cloud identity assessments</strong> — Reviewed a Microsoft Entra ID tenant with Prowler and identified gaps in multifactor authentication enforcement and privileged account controls. Explained the risks to the client and recommended which gaps to address first.</p>
+		  <p><strong>Web Application Firewall</strong> — Configured web application firewall rules, monitoring, and alerts in Sophos Firewall to control access to client web applications and flag suspicious requests for investigation.</p>
+          <p><strong>Incident Response</strong> — Investigated repeated SSL VPN login attempts using firewall logs. Identified the source region and applied geographic access restrictions to block further attempts from that region.</p>
+		  <p><strong>Network Security</strong> — Built a site-to-site VPN between an on-premises network and Azure. Troubleshot tunnel outages and traffic issues by checking IKE negotiation, traffic selectors, and firewall policies, then verified connectivity with users.</p>
         </article>
         <article>
-          <h3>Firewalls and VPNs</h3>
-          <p>I configured Sophos web application firewall rules and investigated IPsec outages. In one case, the remote gateway responded to ping while the tunnel stayed down. That distinction helped narrow the investigation to the VPN configuration.</p>
+          <h3>IT Operations / NOC Intern · Nevigate Global Network</h3>
+          <p class="dates">August 2025 – February 2026</p>
+          <p>Monitored 200+ enterprise network devices with Zabbix and Grafana, investigating outages and performance issues across customer circuits.</p>
+		  <p>Troubleshot connectivity across Layers 1–3, including customer routers, routing issues, and IPsec and SSL VPN connections.</p>
+		  <p>Coordinated escalations with service providers and engineers, documented troubleshooting steps, and kept customers informed throughout each incident.</p>
         </article>
       </div>
     </section>
     <section aria-labelledby="projects">
-      <h2 id="projects">Projects</h2>
+      <h2 id="projects">Personal project</h2>
       <div>
-        <article>
-          <h3>HazeNow</h3>
-          <p>For my final-year project, I built a Malaysian air-quality dashboard that brings readings from more than 70 stations together with Malay and English news reports. I used React, Flask and Azure Cosmos DB.</p>
-        </article>
         <article>
           <h3>Terraform security checks</h3>
           <p>I set up a GitHub Actions workflow that runs Checkov on Terraform code, so I can review infrastructure configuration issues alongside the changes that introduced them.</p>
+		  <p>
+			  <a href="https://github.com/ahmad-muslim/devsecops-iac-security-pipeline">
+				View project on GitHub
+			  </a>
+		  </p>
         </article>
       </div>
+    </section>
+    <section aria-labelledby="tools">
+      <h2 id="tools">Tools &amp; platforms</h2>
+      <dl>
+        <dt>Security assessment</dt>
+        <dd>Tenable Nessus, Prowler, Nuclei, Nikto, sqlmap, OWASP ZAP, Nmap, ffuf, </dd>
+        <dt>Operating systems</dt>
+        <dd>Windows, Windows Server, Kali Linux</dd>
+        <dt>Cloud &amp; identity</dt>
+        <dd>Microsoft Azure, Microsoft Entra ID, Microsoft 365</dd>
+        <dt>Firewalls</dt>
+        <dd>Sophos Firewall, Sophos WAF, Fortinet FortiGate</dd>
+        <dt>Monitoring &amp; infrastructure</dt>
+        <dd>Zabbix, Grafana, PRTG, VMware ESXi</dd>
+        <dt>Automation</dt>
+        <dd>Python, Terraform, GitHub Actions, Checkov</dd>
+      </dl>
     </section>
     <section aria-labelledby="background">
       <h2 id="background">Background</h2>
       <div>
-        <p>BSc in Computer Science (Computer System &amp; Network), University of Malaya. Before joining AXO, I worked on network incidents as a NOC intern at Nevigate Global Network.</p>
-        <p style="margin-top:.65rem">CompTIA Security+ certified.</p>
+        <p>BSc in Computer Science (Computer Systems &amp; Networking), Universiti Malaya.</p>
+        <p style="margin-top:.65rem">CompTIA Security+ · Sophos Firewall v22.0 Engineer · Sophos Endpoint v6.0 Engineer · Fortinet FCF and FCA</p>
       </div>
     </section>
   </main>
-  <footer><a href="https://github.com/ahmad-muslim">GitHub · @ahmad-muslim</a></footer>
+  <footer><a href="mailto:ahmadmuslim-work@outlook.com">ahmadmuslim-work@outlook.com</a><a href="https://github.com/ahmad-muslim">GitHub · @ahmad-muslim</a></footer>
 </body>
 </html>
